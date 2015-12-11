@@ -10,6 +10,14 @@ class Ball {
     loc = new PVector(random(diam, width-diam), random(diam, height-diam));
     vel= PVector.random2D();
     c = color(random(255), random(50), random(100, 255));
+    vel.mult(5);
+  }
+
+  Ball(float x, float y, int sz){
+    diam=sz;
+    loc = new PVector(x,y);
+    vel = PVector.random2D();
+    c=color(random(200), random(250), random(10, 25));
   }
 
   //after declaring fields and setting up constructors, you can define your methods
@@ -39,5 +47,5 @@ class Ball {
     vel.y=-vel.y;
   }
   }
- 
+
 }
