@@ -1,26 +1,20 @@
-Ball b, c,d,e;                //declare a new ball called b
+Ball[] balls=new Ball[200];
+
+              //declare a new ball called b
 
 void setup() {
   size(800, 600);
-  b = new Ball();  
-  c= new Ball(); 
-  d=new Ball(width/2, height/2, 50);
-  e=new Ball();
+  int i =0;
+  balls[i] = new Ball(random(25,300));
+  i++;
   //initialize b as a new object of the Ball class
 }
 
 void draw() {
   background(0);
- // b.display();         //call b's display() method
- // c.display();
- // b.move();
- // c.move();
-  b.run();
-  c.run();
-  d.run();
-  e.run();
-  b.bounce();
-  c.bounce();
-  d.bounce();
-  e.bounce();
+int i=0;
+  balls[i].run();
+  balls[i].bounce();
+  i++;
+ 
 }
